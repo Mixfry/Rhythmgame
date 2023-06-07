@@ -1,0 +1,132 @@
+:root{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #cdcdcd;
+  margin: 0;
+  padding: 0;
+}
+
+#main{
+  position: relative;
+}
+
+#loader {
+  /* ローディング画面のスタイルを指定 */
+  position: fixed;
+  background-color: #f1f1f1;
+  font-size: 24px;
+  margin-top: -10px;
+  margin-left: -10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 200;
+}
+
+.game-container {
+  display: flex;
+  height: 100vh;
+  align-items: flex-end;
+  position: relative;
+}
+
+.game-container::before{
+
+}
+
+.column {
+  left: 30%;
+  width: 10%;
+  height: 100%;
+  background-color: #222;
+  position: relative;
+}
+
+.note {
+  width: 99%;
+  height: 15px;
+  background-color: #fff;
+  position: absolute;
+  top: -10px;
+  left: 1px;
+  animation: note-fall 1s linear infinite;
+}
+
+@keyframes note-fall {
+  0% {
+    top: 1px;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+#PerfectCount{
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  font-size: 36px;
+
+}#GreatCount{
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  font-size: 36px;
+}
+
+#GoodCount{
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  font-size: 36px;
+}
+
+#MissCount{
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  font-size: 36px;
+}
+
+#combo{
+  position: absolute;
+  top: 20%;
+  right: 50%;
+  font-size: 100px;
+  transform: translateX(50%);
+  display: inline-block;
+  background: linear-gradient(90deg, #41bbd0, #4173d0 30%, #de70ff);
+  background: -webkit-linear-gradient(0deg, #41bbd0, #419cd0 30%, #d470ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+#score{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 20px;
+}
+
+.line{
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 40%;
+  /* top: 85%; */
+  bottom: 80px;
+  left: 30%;
+  background-color: red;
+  z-index: 10;
+}
+
+.changer{
+  position: fixed;
+  top: 50%;
+  left: 5%;
+}

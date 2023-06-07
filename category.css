@@ -1,0 +1,194 @@
+.column:nth-child(1) {
+  background-color: #333;
+}
+
+.column:nth-child(2) {
+  background-color: #555;
+}
+
+.column:nth-child(3) {
+  background-color: #777;
+}
+
+.column:nth-child(4) {
+  background-color: #999;
+}
+
+.column.active {
+  /* background-color: #66c496; */
+  background: linear-gradient(rgba(60, 58, 58, 0.6), rgba(140, 145, 144, 0.6), rgba(202, 234, 226, 0.6));
+}
+
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+#Perfect {
+  position: absolute;
+  bottom: 35%;
+  right: 50%;
+  font-size: 0; /* 初期状態では非表示 */
+  transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
+  display: inline-block;
+  background: linear-gradient(90deg, #41a8d0, #4173d0 30%, #de70ff);
+  background: -webkit-linear-gradient(0deg, #41a8d0, #419cd0 30%, #d470ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: perfect-appear 0.1s ease-out forwards;
+}
+
+@keyframes perfect-appear {
+  0% {
+    opacity: 0;
+    font-size: 40px;
+    transform: translateX(50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    font-size: 50px; /* 少し小さくなるフォントサイズ */
+    transform: translateX(50%) scale(1);
+  }
+}
+
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+#Great {
+  position: absolute;
+  bottom: 35%;
+  right: 50%;
+  font-size: 0; /* 初期状態では非表示 */
+  transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
+  display: inline-block;
+  background: linear-gradient(90deg, #d05941, #d09241 30%, #ffde70);
+  background: -webkit-linear-gradient(0deg, #d05941, #d09241 30%, #ffde70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: Great-appear 0.3s ease-out forwards;
+}
+
+@keyframes Great-appear {
+  0% {
+    opacity: 0;
+    font-size: 40px;
+    transform: translateX(50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    font-size: 50px; /* 少し小さくなるフォントサイズ */
+    transform: translateX(50%) scale(1);
+  }
+}
+
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#Good {
+  position: absolute;
+  bottom: 35%;
+  right: 50%;
+  font-size: 0; /* 初期状態では非表示 */
+  transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
+  display: inline-block;
+  background: linear-gradient(90deg, #d0c241, #7fd041 30%, #70ff8a);
+  background: -webkit-linear-gradient(0deg, #d0c241, #7fd041 30%, #70ff8a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: Good-appear 0.3s ease-out forwards;
+}
+
+@keyframes Good-appear {
+  0% {
+    opacity: 0;
+    font-size: 40px;
+    transform: translateX(50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    font-size: 50px; /* 少し小さくなるフォントサイズ */
+    transform: translateX(50%) scale(1);
+  }
+}
+
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#Miss {
+  position: absolute;
+  bottom: 35%;
+  right: 50%;
+  font-size: 0; /* 初期状態では非表示 */
+  transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
+  display: inline-block;
+  background: linear-gradient(90deg, #7a7a7a, #a8a8a8 30%, #dfdfdf);
+  background: -webkit-linear-gradient(0deg, #7a7a7a, #a8a8a8 30%, #dfdfdf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: Miss-appear 0.3s ease-out forwards;
+}
+
+@keyframes Miss-appear {
+  0% {
+    opacity: 0;
+    font-size: 40px;
+    transform: translateX(50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    font-size: 50px; /* 少し小さくなるフォントサイズ */
+    transform: translateX(50%) scale(1);
+  }
+}
+
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#Chain {
+  position: absolute;
+  bottom: 35%;
+  right: 50%;
+  font-size: 0; /* 初期状態では非表示 */
+  transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
+  display: inline-block;
+  background: linear-gradient(90deg, #d05941, #d09241 30%, #ffde70);
+  background: -webkit-linear-gradient(0deg, #d05941, #d09241 30%, #ffde70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: Chain-appear 0.1s ease-out forwards;
+}
+
+
+@keyframes Chain-appear {
+  0% {
+    opacity: 0;
+    font-size: 40px;
+    transform: translateX(50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    font-size: 50px; /* 少し小さくなるフォントサイズ */
+    transform: translateX(50%) scale(1);
+  }
+}
+
+
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+#heightcheck{
+  position: fixed;
+  background-color: blue;
+  width: 40%;
+  height: 160px;
+  left: 30%;
+  bottom: 0px;
+
+}
