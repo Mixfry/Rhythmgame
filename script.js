@@ -214,7 +214,7 @@ function createNote() {
   }, 1000);
 }
 
-// setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
+
 setInterval(createNote, 175); /* 1秒ごとにノーツを生成する */
 
 
