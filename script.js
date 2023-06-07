@@ -234,12 +234,3 @@ setInterval(createNote, 175); /* 1秒ごとにノーツを生成する */
 
 
 
-
-window.addEventListener("load", function() {
-  // 4秒後にローディング画面を非表示にする
-  setTimeout(function() {
-    var loader = document.getElementById("loader");
-    loader.style.display = "none";
-  }, 1000);
-});
-
