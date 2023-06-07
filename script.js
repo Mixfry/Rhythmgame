@@ -206,7 +206,6 @@ const misskun = document.getElementById("MissCount");
 const note = document.createElement('div');
 note.classList.add('note');
 column.appendChild(note);
-console.log("craeated!!");
 setTimeout(() => {
   let noteTop = note.offsetTop
   if (noteTop > 1) {
@@ -217,7 +216,6 @@ setTimeout(() => {
 
       MISSCOUNT++;
       misskun.innerHTML = `Miss : ${MISSCOUNT}`;
-      console.log("deleted!!");
     }
   }
 }, 990);
