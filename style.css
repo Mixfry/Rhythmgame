@@ -65,32 +65,7 @@ html {
   }
 }
 
-#PerfectCount{
-  position: absolute;
-  top: 30%;
-  right: 13%;
-  font-size: 36px;
 
-}#GreatCount{
-  position: absolute;
-  top: 40%;
-  right: 13%;
-  font-size: 36px;
-}
-
-#GoodCount{
-  position: absolute;
-  top: 50%;
-  right: 13%;
-  font-size: 36px;
-}
-
-#MissCount{
-  position: absolute;
-  top: 60%;
-  right: 13%;
-  font-size: 36px;
-}
 
 #combo{
   position: absolute;
