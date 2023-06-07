@@ -63,7 +63,7 @@ function handleKeyDown(event) {
     if (noteArray[0]) {
       const note = noteArray[0];
       const noteTop = note.offsetTop;
-      const hitThreshold = 400; // 判定線との距離の許容範囲
+      const hitThreshold = 300; // 判定線との距離の許容範囲
       const perfectkun = document.getElementById("PerfectCount");
       const greatkun = document.getElementById("GreatCount");
       const goodkun = document.getElementById("GoodCount");
@@ -76,15 +76,17 @@ function handleKeyDown(event) {
           showGood();
 
           note.remove();
-          COMBOCOUNT++;
+
+          COMBOCOUNT = 0;
+          combokun.innerHTML = ``;
+
           SCORECOUNT += 20;
-          combokun.innerHTML = `${COMBOCOUNT}`;
           scorekun.innerHTML = `スコア : ${SCORECOUNT}`;
 
           GOODCOUNT++;
           goodkun.innerHTML = `Good : ${GOODCOUNT}`;
 
-        } else if (difference > 130 && difference <= 250) {
+        } else if (difference > 130 && difference <= 200) {
           showGreat();
 
           note.remove();
@@ -96,7 +98,7 @@ function handleKeyDown(event) {
           GREATCOUNT++;
           greatkun.innerHTML = `Great : ${GREATCOUNT}`;
 
-        } else if (difference > 250 && difference <= 400) {
+        } else if (difference > 200 && difference <= 300) {
           showPerfect();
           
           note.remove();
@@ -186,7 +188,7 @@ function getRandomColumnNumber() {
   return Math.floor(Math.random() * 4) + 1; 
  }
 
-// let columnSequence = [3,2];
+// let columnSequence = [4,3,2,1,2,3];
 // let sequenceIndex = 0;
 
 function createNote() {
@@ -209,7 +211,7 @@ function createNote() {
       if(note){
         note.remove(); 
         COMBOCOUNT = 0;
-        combokun.innerHTML = `${0}`;
+        combokun.innerHTML = ``;
 
         MISSCOUNT++;
         misskun.innerHTML = `Miss : ${MISSCOUNT}`;
