@@ -72,7 +72,7 @@ if (columnNumber) {
       // 判定線との差の絶対値を計算
       const difference = Math.abs(noteTop - (window.innerHeight - hitThreshold));
 
-      if (difference >= 30 && difference <= 130) {
+      if (difference >= 30 && difference <= 120) {
         showGood();
 
         note.remove();
@@ -86,7 +86,7 @@ if (columnNumber) {
         GOODCOUNT++;
         goodkun.innerHTML = `Good : ${GOODCOUNT}`;
 
-      } else if (difference > 130 && difference <= 200) {
+      } else if (difference > 120 && difference <= 200) {
         showGreat();
 
         note.remove();
@@ -109,8 +109,10 @@ if (columnNumber) {
 
         PERFECTCOUNT++;
         perfectkun.innerHTML = `Perfect : ${PERFECTCOUNT}`;
+
+        
       }
-      
+      console.log(difference);
     }
   }
 
