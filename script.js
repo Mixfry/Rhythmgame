@@ -72,7 +72,7 @@ if (columnNumber) {
       // 判定線との差の絶対値を計算
       const difference = Math.abs(noteTop - (window.innerHeight - hitThreshold));
 
-      if (difference >= 30 && difference <= 120) {
+      if (difference >= 30 && difference <= 100) {
         showGood();
 
         note.remove();
@@ -86,7 +86,7 @@ if (columnNumber) {
         GOODCOUNT++;
         goodkun.innerHTML = `Good : ${GOODCOUNT}`;
 
-      } else if (difference > 120 && difference <= 200) {
+      } else if (difference > 100 && difference <= 190) {
         showGreat();
 
         note.remove();
@@ -98,7 +98,7 @@ if (columnNumber) {
         GREATCOUNT++;
         greatkun.innerHTML = `Great : ${GREATCOUNT}`;
 
-      } else if (difference > 200 && difference <= 300) {
+      } else if (difference > 190 && difference <= 300) {
         showPerfect();
         
         note.remove();
@@ -109,7 +109,7 @@ if (columnNumber) {
 
         PERFECTCOUNT++;
         perfectkun.innerHTML = `Perfect : ${PERFECTCOUNT}`;
-
+        
         
       }
     }
@@ -205,8 +205,11 @@ const misskun = document.getElementById("MissCount");
 const note = document.createElement('div');
 note.classList.add('note');
 column.appendChild(note);
+
+
 setTimeout(() => {
   let noteTop = note.offsetTop
+  console.log(document.documentElement.offsetHeight - (window.pageYOffset + note.getBoundingClientRect().top))
   if (noteTop > 1) {
     if(note){
       note.remove(); 
@@ -217,7 +220,7 @@ setTimeout(() => {
       misskun.innerHTML = `Miss : ${MISSCOUNT}`;
     }
   }
-}, 990);
+}, 980);
 }
 
 // setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
