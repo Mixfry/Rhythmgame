@@ -206,7 +206,7 @@ const misskun = document.getElementById("MissCount");
 const note = document.createElement('div');
 note.classList.add('note');
 column.appendChild(note);
-
+console.log("craeated!!");
 setTimeout(() => {
   let noteTop = note.offsetTop
   if (noteTop > 1) {
@@ -217,9 +217,10 @@ setTimeout(() => {
 
       MISSCOUNT++;
       misskun.innerHTML = `Miss : ${MISSCOUNT}`;
+      console.log("deleted!!");
     }
   }
-}, 1000);
+}, 990);
 }
 
 // setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
@@ -243,13 +244,6 @@ setInterval(createNote, 175); /* 1秒ごとにノーツを生成する */
 
 
 
-// window.addEventListener("load", function() {
-//   // 4秒後にローディング画面を非表示にする
-//   setTimeout(function() {
-//     var loader = document.getElementById("loader");
-//     loader.style.display = "none";
-//   }, 1000);
-// });
 
 // function applyNumber() {
 //   var input = document.getElementById('numberInput').value;
