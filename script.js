@@ -147,13 +147,7 @@ function showGood() {
   }, 300);
 }
 
-// function showChain() {
-//   const chain = document.getElementById('Chain');
-//   chain.style.display = 'inline-block';
-//   setTimeout(() => {
-//     chain.style.display = 'none';
-//   }, 100);
-// }
+
 
 function handleKeyUp(event) {
   const key = event.key.toUpperCase();
@@ -249,10 +243,3 @@ window.addEventListener("load", function() {
   }, 1000);
 });
 
-// function applyNumber() {
-//   var input = document.getElementById('numberInput').value;
-//   var output = document.getElementById('output');
-//   output.textContent = `現在の密度 : ${input}`;
-//   setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
-//   note.remove();
-// }
