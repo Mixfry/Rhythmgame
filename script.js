@@ -33,7 +33,7 @@
 
 
 function processNoteInColumn(columnNumber) {
-if(document.getElementsByClassName("note") != null)
+if(document.getElementsByClassName("note") != undefined)
   {
     const column = document.getElementById(`column${columnNumber}`);
     const notes = column.getElementsByClassName('note');
