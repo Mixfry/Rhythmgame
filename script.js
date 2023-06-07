@@ -112,7 +112,6 @@ if (columnNumber) {
 
         
       }
-      console.log(difference);
     }
   }
 
