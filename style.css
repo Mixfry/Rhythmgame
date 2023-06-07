@@ -39,6 +39,7 @@ html {
   top: -10px;
   left: 1px;
   animation: note-fall 1s linear infinite;
+  transform: translateY(100%);
 }
 
 @keyframes note-fall {
