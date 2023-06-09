@@ -288,12 +288,12 @@ function Game6(){
 }
 
 function buttonvinish(){
-  button1.style.display = 'none';
-  button2.style.display = 'none';
-  button3.style.display = 'none';
-  button4.style.display = 'none';
-  button5.style.display = 'none';
-  button6.style.display = 'none';
+  startButton1.style.display = 'none';
+  startButton2.style.display = 'none';
+  startButton3.style.display = 'none';
+  startButton4.style.display = 'none';
+  startButton5.style.display = 'none';
+  startButton6.style.display = 'none';
   keys[0].style.display = 'none';
   keys[1].style.display = 'none';
   keys[2].style.display = 'none';
