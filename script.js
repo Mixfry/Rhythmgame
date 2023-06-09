@@ -1,3 +1,7 @@
+// 
+//        コード汚いから見ないで！！！！！！！！！
+// 
+
 const perfect = document.getElementById('Perfect');
 perfect.style.display = 'none';
 
@@ -45,7 +49,7 @@ if(document.getElementsByClassName("note") != undefined)
 
 
 
-
+// キー押した時の処理
 function handleKeyDown(event) {
 const key = event.key.toUpperCase();
 const columnNumber = getKeyColumnNumber(key);
@@ -61,7 +65,7 @@ if (columnNumber) {
     const hitThreshold = 300; // 判定線との距離の許容範囲
     
     if (noteTop >= window.innerHeight - hitThreshold) {
-      // 判定線との差の絶対値を計算
+      // 判定線との差の絶対値を計算する
       const difference = Math.abs(noteTop - (window.innerHeight - hitThreshold));
 
       if (difference >= 30 && difference <= 100) {
@@ -93,6 +97,7 @@ if (columnNumber) {
 }
 }
 
+// たくさんのファンクション
 function showCount(count) {
   const judge = document.getElementById(count);
   judge.style.display = 'inline-block';
@@ -158,6 +163,7 @@ function showScoreCount(score){
 //   }, 100);
 // }
 
+// キーあげた時に後ろの光消すやつ
 function handleKeyUp(event) {
 const key = event.key.toUpperCase();
 const columnNumber = getKeyColumnNumber(key);
@@ -169,7 +175,7 @@ if (columnNumber) {
 
 
 
-
+// 置き換え
 function getKeyColumnNumber(key) {
 switch (key) {
   case 'D':
@@ -188,7 +194,8 @@ switch (key) {
 
 // 
 
-
+// 譜面
+//一応自分で作ることもできる、一応
 function getRandomColumnNumber() {
 return Math.floor(Math.random() * 4) + 1; 
 }
@@ -212,7 +219,7 @@ column.appendChild(note);
 
 
 
-
+//ノーツ消す処理
 setTimeout(() => {
   let noteTop = note.offsetTop
   console.log(document.documentElement.offsetHeight - (window.pageYOffset + note.getBoundingClientRect().top))
@@ -231,6 +238,13 @@ setTimeout(() => {
 }
 
 // setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
+
+
+//                                                                                  //
+//        眠くて超ゴリ押しで書いたから見ないでください！！！！！！！！！！！！！！！！           //
+//                                                                                  //
+
+
 const startButton1 = document.getElementById('button1')
 const startButton2 = document.getElementById('button2')
 const startButton3 = document.getElementById('button3')

@@ -9,17 +9,13 @@ html {
   position: relative;
 }
 
-
+/* 4レーン */
 .game-container {
   display: flex;
   height: 100vh;
   align-items: flex-end;
   position: relative;
   /* perspective: 300px;  */
-}
-
-.game-container::before{
-
 }
 
 .column {
@@ -31,6 +27,8 @@ html {
   position: relative;
 }
 
+
+/* ノーツの見た目 */
 .note {
   width: 99%;
   height: 15px;
@@ -42,6 +40,7 @@ html {
   transform: translateY(100%);
 }
 
+/* ノーツの落下 */
 @keyframes note-fall {
   0% {
     top: 1px;
@@ -50,28 +49,6 @@ html {
     top: 100%;
   }
 }
-
-.slidenote {
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  width: 99%;
-  height: 15px;
-  background-color: #dcd382;
-  position: absolute;
-  top: -10px;
-  left: 1px;
-  animation: note-fall 1s linear infinite;
-  transform: translateY(100%);
-}
-
-@keyframes note-fall {
-  0% {
-    top: 2px;
-  }
-  100% {
-    top: 100%;
-  }
-}
-
 
 
 #combo{
