@@ -106,20 +106,14 @@ function showJudgeCount(judge) {
   const greatkun = document.getElementById("GreatCount");
   const goodkun = document.getElementById("GoodCount");
   if (judge == 'Good') {
-
     GOODCOUNT++;
     goodkun.innerHTML = `Good : ${GOODCOUNT}`;
-
   }else if (judge == 'Great') {
-
     GREATCOUNT++;
     greatkun.innerHTML = `Great : ${GREATCOUNT}`;
-
   }else {
-
     PERFECTCOUNT++;
     perfectkun.innerHTML = `Perfect : ${PERFECTCOUNT}`;
-
   }
 }
 
@@ -226,6 +220,7 @@ setTimeout(() => {
       COMBOCOUNT = 0;
       combokun.innerHTML = ``;
 
+      showCount('Miss');
       MISSCOUNT++;
       misskun.innerHTML = `Miss : ${MISSCOUNT}`;
     }
@@ -234,7 +229,7 @@ setTimeout(() => {
 }
 
 // setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
-setInterval(createNote, 175); /* 1秒ごとにノーツを生成する */
+setInterval(createNote, 200); /* 1秒ごとにノーツを生成する */
 
 
 

@@ -123,8 +123,8 @@
   font-size: 0; /* 初期状態では非表示 */
   transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
   display: inline-block;
-  background: linear-gradient(90deg, #7a7a7a, #a8a8a8 30%, #dfdfdf);
-  background: -webkit-linear-gradient(0deg, #7a7a7a, #a8a8a8 30%, #dfdfdf);
+  background: linear-gradient(90deg, #ffffff, #a8a8a8 30%, #1f1e33);
+  background: -webkit-linear-gradient(0deg, #ffffff, #a8a8a8 30%, #1f1e33);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: Miss-appear 0.3s ease-out forwards;
