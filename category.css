@@ -143,35 +143,7 @@
   }
 }
 
-/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-#Chain {
-  position: absolute;
-  bottom: 35%;
-  right: 50%;
-  font-size: 0; /* 初期状態では非表示 */
-  transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
-  display: inline-block;
-  background: linear-gradient(90deg, #d05941, #d09241 30%, #ffde70);
-  background: -webkit-linear-gradient(0deg, #d05941, #d09241 30%, #ffde70);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: Chain-appear 0.1s ease-out forwards;
-}
-
-
-@keyframes Chain-appear {
-  0% {
-    opacity: 0;
-    font-size: 40px;
-    transform: translateX(50%) scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    font-size: 50px; /* 少し小さくなるフォントサイズ */
-    transform: translateX(50%) scale(1);
-  }
-}
 
 
 /*   //////////////////////////////////////////////////////////////////////////////////////////////////// */

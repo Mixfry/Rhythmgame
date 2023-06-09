@@ -1,6 +1,3 @@
-const chain = document.getElementById('Chain');
-chain.style.display = 'none';
-
 const perfect = document.getElementById('Perfect');
 perfect.style.display = 'none';
 
@@ -50,8 +47,6 @@ if(document.getElementsByClassName("note") != undefined)
 
 
 function handleKeyDown(event) {
-const combokun = document.getElementById("combo");
-const scorekun = document.getElementById("score");
 const key = event.key.toUpperCase();
 const columnNumber = getKeyColumnNumber(key);
 
@@ -64,53 +59,29 @@ if (columnNumber) {
     const note = noteArray[0];
     const noteTop = note.offsetTop;
     const hitThreshold = 300; // 判定線との距離の許容範囲
-    const perfectkun = document.getElementById("PerfectCount");
-    const greatkun = document.getElementById("GreatCount");
-    const goodkun = document.getElementById("GoodCount");
     
     if (noteTop >= window.innerHeight - hitThreshold) {
       // 判定線との差の絶対値を計算
       const difference = Math.abs(noteTop - (window.innerHeight - hitThreshold));
 
       if (difference >= 30 && difference <= 100) {
-        showGood();
-
+        showCount('Good');
+        showJudgeCount('Good');
+        showComboCount('break');
+        showScoreCount('Good');
         note.remove();
-
-        COMBOCOUNT = 0;
-        combokun.innerHTML = ``;
-
-        SCORECOUNT += 20;
-        scorekun.innerHTML = `スコア : ${SCORECOUNT}`;
-
-        GOODCOUNT++;
-        goodkun.innerHTML = `Good : ${GOODCOUNT}`;
-
       } else if (difference > 100 && difference <= 190) {
-        showGreat();
-
+        showCount('Great');
+        showJudgeCount('Great');
+        showComboCount('keep');
+        showScoreCount('Great');
         note.remove();
-        COMBOCOUNT++;
-        SCORECOUNT += 50;
-        combokun.innerHTML = `${COMBOCOUNT}`;
-        scorekun.innerHTML = `スコア : ${SCORECOUNT}`;
-
-        GREATCOUNT++;
-        greatkun.innerHTML = `Great : ${GREATCOUNT}`;
-
       } else if (difference > 190 && difference <= 300) {
-        showPerfect();
-        
+        showCount('Perfect');
+        showJudgeCount('Perfect');
+        showComboCount('keep');
+        showScoreCount('Perfect');
         note.remove();
-        COMBOCOUNT++;
-        SCORECOUNT += 200;
-        combokun.innerHTML = `${COMBOCOUNT}`;
-        scorekun.innerHTML = `スコア : ${SCORECOUNT}`;
-
-        PERFECTCOUNT++;
-        perfectkun.innerHTML = `Perfect : ${PERFECTCOUNT}`;
-        
-        
       }
     }
   }
@@ -122,30 +93,67 @@ if (columnNumber) {
 }
 }
 
-
-
-function showPerfect() {
-const perfect = document.getElementById('Perfect');
-perfect.style.display = 'inline-block';
-setTimeout(() => {
-  perfect.style.display = 'none';
+function showCount(count) {
+  const judge = document.getElementById(count);
+  judge.style.display = 'inline-block';
+  setTimeout(() => {
+    judge.style.display = 'none';
 }, 300);
 }
 
-function showGreat() {
-const great = document.getElementById('Great');
-great.style.display = 'inline-block';
-setTimeout(() => {
-  great.style.display = 'none';
-}, 300);
+function showJudgeCount(judge) {
+  const perfectkun = document.getElementById("PerfectCount");
+  const greatkun = document.getElementById("GreatCount");
+  const goodkun = document.getElementById("GoodCount");
+  if (judge == 'Good') {
+
+    GOODCOUNT++;
+    goodkun.innerHTML = `Good : ${GOODCOUNT}`;
+
+  }else if (judge == 'Great') {
+
+    GREATCOUNT++;
+    greatkun.innerHTML = `Great : ${GREATCOUNT}`;
+
+  }else {
+
+    PERFECTCOUNT++;
+    perfectkun.innerHTML = `Perfect : ${PERFECTCOUNT}`;
+
+  }
 }
 
-function showGood() {
-const great = document.getElementById('Good');
-great.style.display = 'inline-block';
-setTimeout(() => {
-  great.style.display = 'none';
-}, 300);
+function showComboCount(combo){
+  const combokun = document.getElementById("combo");
+  if(combo == 'keep'){
+
+    COMBOCOUNT++;
+    combokun.innerHTML = `${COMBOCOUNT}`;
+
+  }else{
+    
+    COMBOCOUNT = 0;
+    combokun.innerHTML = ``;
+
+  }
+}
+
+function showScoreCount(score){
+  const scorekun = document.getElementById("score");
+  if(score == 'Good'){
+
+    SCORECOUNT += 20;
+    scorekun.innerHTML = `スコア : ${SCORECOUNT}`;
+
+  }else if(score == 'Great') {
+
+    SCORECOUNT += 50;
+    scorekun.innerHTML = `スコア : ${SCORECOUNT}`;
+
+  }else {
+    SCORECOUNT += 200;
+    scorekun.innerHTML = `スコア : ${SCORECOUNT}`;
+  }
 }
 
 // function showChain() {
@@ -226,7 +234,7 @@ setTimeout(() => {
 }
 
 // setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
-setInterval(createNote, 150); /* 1秒ごとにノーツを生成する */
+setInterval(createNote, 175); /* 1秒ごとにノーツを生成する */
 
 
 
