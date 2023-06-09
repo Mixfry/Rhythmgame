@@ -168,6 +168,8 @@ if (columnNumber) {
 }
 
 
+
+
 function getKeyColumnNumber(key) {
 switch (key) {
   case 'D':
@@ -229,7 +231,57 @@ setTimeout(() => {
 }
 
 // setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
-setInterval(createNote, 200); /* 1秒ごとにノーツを生成する */
+const startButton1 = document.getElementById('button1')
+const startButton2 = document.getElementById('button2')
+const startButton3 = document.getElementById('button3')
+const startButton4 = document.getElementById('button4')
+const startButton5 = document.getElementById('button5')
+const startButton6 = document.getElementById('button6')
+startButton1.addEventListener('click', Game1)
+startButton2.addEventListener('click', Game2)
+startButton3.addEventListener('click', Game3)
+startButton4.addEventListener('click', Game4)
+startButton5.addEventListener('click', Game5)
+startButton6.addEventListener('click', Game6)
+
+const keys = document.getElementsByClassName('key')
 
 
 
+function Game1(){
+  setInterval(createNote, 1000); 
+  buttonvinish();
+}
+function Game2(){
+  setInterval(createNote, 750); 
+  buttonvinish();
+}
+function Game3(){
+  setInterval(createNote, 500); 
+  buttonvinish();
+}
+function Game4(){
+  setInterval(createNote, 200); 
+  buttonvinish();
+}
+function Game5(){
+  setInterval(createNote, 150); 
+  buttonvinish();
+}
+function Game6(){
+  setInterval(createNote, 120); 
+  buttonvinish();
+}
+
+function buttonvinish(){
+  button1.style.display = 'none';
+  button2.style.display = 'none';
+  button3.style.display = 'none';
+  button4.style.display = 'none';
+  button5.style.display = 'none';
+  button6.style.display = 'none';
+  keys[0].style.display = 'none';
+  keys[1].style.display = 'none';
+  keys[2].style.display = 'none';
+  keys[3].style.display = 'none';
+}

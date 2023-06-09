@@ -115,3 +115,25 @@ html {
   top: 50%;
   left: 5%;
 }
+
+.button{
+  position: absolute;
+  display: flexbox;
+  font-size: 20px;
+  top: 15%;
+  left: 5%;
+  width: 150px;
+}
+
+.Start{
+  width: 100%;
+}
+
+.key{
+  position: absolute;
+  color: #ffffff23;
+  top: 30%;
+  left: 50%;
+  font-size: 50px;
+  transform: translateX(-50%);
+}
