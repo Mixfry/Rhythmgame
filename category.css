@@ -211,13 +211,3 @@
 
 /*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-#heightcheck{
-  position: fixed;
-  background-color: blue;
-  width: 40%;
-  height: 160px;
-  left: 30%;
-  bottom: 0px;
-
-}
-

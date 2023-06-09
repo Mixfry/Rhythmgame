@@ -44,7 +44,7 @@ html {
 
 @keyframes note-fall {
   0% {
-    top: 2px;
+    top: 1px;
   }
   100% {
     top: 100%;
