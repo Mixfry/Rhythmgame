@@ -251,15 +251,17 @@ const startButton3 = document.getElementById('button3')
 const startButton4 = document.getElementById('button4')
 const startButton5 = document.getElementById('button5')
 const startButton6 = document.getElementById('button6')
+const startButton7 = document.getElementById('button7')
 startButton1.addEventListener('click', Game1)
 startButton2.addEventListener('click', Game2)
 startButton3.addEventListener('click', Game3)
 startButton4.addEventListener('click', Game4)
 startButton5.addEventListener('click', Game5)
 startButton6.addEventListener('click', Game6)
+startButton7.addEventListener('click', Game7)
 
 const keys = document.getElementsByClassName('key')
-
+const line = document.getElementsByClassName('line')
 
 
 function Game1(){
@@ -286,6 +288,15 @@ function Game6(){
   setInterval(createNote, 125); 
   buttonvinish();
 }
+function Game7(){
+  setInterval(createNote, 175); 
+  buttonvinish();
+  column1.classList.add('left');
+  column2.classList.add('left');
+  column3.classList.add('right');
+  column4.classList.add('right');
+  line[0].classList.add('wide');
+}
 
 function buttonvinish(){
   startButton1.style.display = 'none';
@@ -294,6 +305,7 @@ function buttonvinish(){
   startButton4.style.display = 'none';
   startButton5.style.display = 'none';
   startButton6.style.display = 'none';
+  startButton7.style.display = 'none';
   keys[0].style.display = 'none';
   keys[1].style.display = 'none';
   keys[2].style.display = 'none';
