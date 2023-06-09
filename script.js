@@ -207,6 +207,8 @@ note.classList.add('note');
 column.appendChild(note);
 
 
+
+
 setTimeout(() => {
   let noteTop = note.offsetTop
   console.log(document.documentElement.offsetHeight - (window.pageYOffset + note.getBoundingClientRect().top))
@@ -224,7 +226,7 @@ setTimeout(() => {
 }
 
 // setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
-setInterval(createNote, 175); /* 1秒ごとにノーツを生成する */
+setInterval(createNote, 150); /* 1秒ごとにノーツを生成する */
 
 
 
