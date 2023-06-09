@@ -70,13 +70,13 @@ if (columnNumber) {
         showComboCount('break');
         showScoreCount('Good');
         note.remove();
-      } else if (difference > 100 && difference <= 190) {
+      } else if (difference > 100 && difference <= 170) {
         showCount('Great');
         showJudgeCount('Great');
         showComboCount('keep');
         showScoreCount('Great');
         note.remove();
-      } else if (difference > 190 && difference <= 300) {
+      } else if (difference > 170 && difference <= 300) {
         showCount('Perfect');
         showJudgeCount('Perfect');
         showComboCount('keep');
@@ -269,7 +269,7 @@ function Game5(){
   buttonvinish();
 }
 function Game6(){
-  setInterval(createNote, 120); 
+  setInterval(createNote, 125); 
   buttonvinish();
 }
 
