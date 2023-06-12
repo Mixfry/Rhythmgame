@@ -200,17 +200,19 @@ switch (key) {
 // return Math.floor(Math.random() * 4) + 1; 
 // }
 
+let previousNumber = 0;
+
 function getRandomColumnNumber() {
-  let previousNumber = null;
-  let currentNumber = null;
-
-  do {
-    previousNumber = currentNumber;
-    currentNumber = Math.floor(Math.random() * 4) + 1;
-  } while (previousNumber === currentNumber);
-
-  return currentNumber;
+  let randomNumber = Math.floor(Math.random() * 4) + 1;
+  
+  while (randomNumber === previousNumber) {
+    randomNumber = Math.floor(Math.random() * 4) + 1;
+  }
+  
+  previousNumber = randomNumber;
+  return randomNumber;
 }
+
 
 
 // let columnSequence = [4,3,2,1,2,3];
