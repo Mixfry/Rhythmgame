@@ -240,6 +240,40 @@ setTimeout(() => {
 // setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
 
 
+
+
+
+
+
+
+//                               //
+//        クリックはんて           //
+//                               //
+
+const column1 = document.getElementById('column1');
+const column2 = document.getElementById('column2');
+const column3 = document.getElementById('column3');
+const column4 = document.getElementById('column4');
+
+column1.addEventListener('click', () => handleKeyDown({ key: 'D' }));
+column2.addEventListener('click', () => handleKeyDown({ key: 'F' }));
+column3.addEventListener('click', () => handleKeyDown({ key: 'J' }));
+column4.addEventListener('click', () => handleKeyDown({ key: 'K' }));
+
+column1.addEventListener('mouseup', () => handleKeyup({ key: 'D' }));
+column2.addEventListener('mouseup', () => handleKeyup({ key: 'F' }));
+column3.addEventListener('mouseup', () => handleKeyup({ key: 'J' }));
+column4.addEventListener('mouseup', () => handleKeyup({ key: 'K' }));
+
+
+
+
+
+
+
+
+
+
 //                                                                                  //
 //        眠くて超ゴリ押しで書いたから見ないでください！！！！！！！！！！！！！！！！           //
 //                                                                                  //
