@@ -167,6 +167,7 @@ function showScoreCount(score){
 function handleKeyUp(event) {
 const key = event.key.toUpperCase();
 const columnNumber = getKeyColumnNumber(key);
+console.log(columnNumber)
 if (columnNumber) {
   const column = document.getElementById(`column${columnNumber}`);
   column.classList.remove('active');
@@ -283,10 +284,10 @@ column2.addEventListener('click', () => handleKeyDown({ key: 'F' }));
 column3.addEventListener('click', () => handleKeyDown({ key: 'J' }));
 column4.addEventListener('click', () => handleKeyDown({ key: 'K' }));
 
-column1.addEventListener('mouseup', () => removetemp({ key: 'D' }));
-column2.addEventListener('mouseup', () => removetemp({ key: 'F' }));
-column3.addEventListener('mouseup', () => removetemp({ key: 'J' }));
-column4.addEventListener('mouseup', () => removetemp({ key: 'K' }));
+column1.addEventListener('mouseup', () => handleKeyUp({ key: 'D' }));
+column2.addEventListener('mouseup', () => handleKeyUp({ key: 'F' }));
+column3.addEventListener('mouseup', () => handleKeyUp({ key: 'J' }));
+column4.addEventListener('mouseup', () => handleKeyUp({ key: 'K' }));
 
 
 
