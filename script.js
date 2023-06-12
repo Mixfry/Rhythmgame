@@ -196,9 +196,22 @@ switch (key) {
 
 // 譜面
 //一応自分で作ることもできる、一応
+// function getRandomColumnNumber() {
+// return Math.floor(Math.random() * 4) + 1; 
+// }
+
 function getRandomColumnNumber() {
-return Math.floor(Math.random() * 4) + 1; 
+  let previousNumber = null;
+  let currentNumber = null;
+
+  do {
+    previousNumber = currentNumber;
+    currentNumber = Math.floor(Math.random() * 4) + 1;
+  } while (previousNumber === currentNumber);
+
+  return currentNumber;
 }
+
 
 // let columnSequence = [4,3,2,1,2,3];
 // let sequenceIndex = 0;
