@@ -12,9 +12,8 @@ html {
 /* 4レーン */
 .game-container {
   display: flex;
-  height: 100vh;
-  align-items: flex-end;
-  position: relative;
+  margin-top: -8px;
+  height: calc(100vh - 16px);
   /* perspective: 300px;  */
 }
 
@@ -66,7 +65,7 @@ html {
 
 
 #score{
-  position: absolute;
+  position: fixed;
   top: 5%;
   left: 5%;
   font-size: 20px;
@@ -93,7 +92,7 @@ html {
 }
 
 .button{
-  position: absolute;
+  position: fixed;
   display: flexbox;
   font-size: 20px;
   top: 15%;
@@ -120,3 +119,5 @@ html {
   font-size: 50px;
   transform: translateX(-50%);
 }
+
+

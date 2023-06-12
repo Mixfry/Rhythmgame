@@ -74,13 +74,13 @@ if (columnNumber) {
         showComboCount('break');
         showScoreCount('Good');
         note.remove();
-      } else if (difference > 100 && difference <= 170) {
+      } else if (difference > 100 && difference <= 150) {
         showCount('Great');
         showJudgeCount('Great');
         showComboCount('keep');
         showScoreCount('Great');
         note.remove();
-      } else if (difference > 170 && difference <= 300) {
+      } else if (difference > 150 && difference <= 300) {
         showCount('Perfect');
         showJudgeCount('Perfect');
         showComboCount('keep');
@@ -195,11 +195,19 @@ switch (key) {
 // 
 
 // 譜面
+
+
 //一応自分で作ることもできる、一応
+// let columnSequence = [4,3,2,1,2,3];
+// let sequenceIndex = 0;
+
+
+//　　　重複してもいい時の生成コード
 // function getRandomColumnNumber() {
 // return Math.floor(Math.random() * 4) + 1; 
 // }
 
+//　　　重複させない生成コード
 let previousNumber = 0;
 
 function getRandomColumnNumber() {
@@ -215,11 +223,12 @@ function getRandomColumnNumber() {
 
 
 
-// let columnSequence = [4,3,2,1,2,3];
-// let sequenceIndex = 0;
+
 
 function createNote() {
+//ランダム生成用
 const columnNumber = getRandomColumnNumber();
+//譜面制作用
 // const columnNumber = columnSequence[sequenceIndex];
 // sequenceIndex = (sequenceIndex + 1) % columnSequence.length;
 // 
@@ -252,7 +261,6 @@ setTimeout(() => {
 }, 980);
 }
 
-// setInterval(createNote, input); /* 1秒ごとにノーツを生成する */
 
 
 
@@ -275,10 +283,10 @@ column2.addEventListener('click', () => handleKeyDown({ key: 'F' }));
 column3.addEventListener('click', () => handleKeyDown({ key: 'J' }));
 column4.addEventListener('click', () => handleKeyDown({ key: 'K' }));
 
-column1.addEventListener('mouseup', () => handleKeyup({ key: 'D' }));
-column2.addEventListener('mouseup', () => handleKeyup({ key: 'F' }));
-column3.addEventListener('mouseup', () => handleKeyup({ key: 'J' }));
-column4.addEventListener('mouseup', () => handleKeyup({ key: 'K' }));
+column1.addEventListener('mouseup', () => removetemp({ key: 'D' }));
+column2.addEventListener('mouseup', () => removetemp({ key: 'F' }));
+column3.addEventListener('mouseup', () => removetemp({ key: 'J' }));
+column4.addEventListener('mouseup', () => removetemp({ key: 'K' }));
 
 
 
