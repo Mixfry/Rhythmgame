@@ -279,18 +279,15 @@ const column2 = document.getElementById('column2');
 const column3 = document.getElementById('column3');
 const column4 = document.getElementById('column4');
 
-column1.addEventListener('click', () => handleKeyDown({ key: 'D' }));
-column2.addEventListener('click', () => handleKeyDown({ key: 'F' }));
-column3.addEventListener('click', () => handleKeyDown({ key: 'J' }));
-column4.addEventListener('click', () => handleKeyDown({ key: 'K' }));
+column1.addEventListener('mousedown', () => handleKeyDown({ key: 'D' }));
+column2.addEventListener('mousedown', () => handleKeyDown({ key: 'F' }));
+column3.addEventListener('mousedown', () => handleKeyDown({ key: 'J' }));
+column4.addEventListener('mousedown', () => handleKeyDown({ key: 'K' }));
 
 column1.addEventListener('mouseup', () => handleKeyUp({ key: 'D' }));
 column2.addEventListener('mouseup', () => handleKeyUp({ key: 'F' }));
 column3.addEventListener('mouseup', () => handleKeyUp({ key: 'J' }));
 column4.addEventListener('mouseup', () => handleKeyUp({ key: 'K' }));
-
-
-
 
 
 

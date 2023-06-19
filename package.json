@@ -1,0 +1,22 @@
+{
+  "name": "rhythmgame",
+  "version": "1.0.0",
+  "description": "作り途中・コード雑",
+  "main": "script.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mixfry/Rhythmgame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mixfry/Rhythmgame/issues"
+  },
+  "homepage": "https://github.com/Mixfry/Rhythmgame#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
