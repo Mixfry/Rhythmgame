@@ -167,7 +167,7 @@ function showScoreCount(score){
 function handleKeyUp(event) {
 const key = event.key.toUpperCase();
 const columnNumber = getKeyColumnNumber(key);
-console.log(columnNumber)
+// console.log(columnNumber)
 if (columnNumber) {
   const column = document.getElementById(`column${columnNumber}`);
   column.classList.remove('active');
@@ -247,7 +247,7 @@ column.appendChild(note);
 //ノーツ消す処理
 setTimeout(() => {
   let noteTop = note.offsetTop
-  console.log(document.documentElement.offsetHeight - (window.pageYOffset + note.getBoundingClientRect().top))
+  // console.log(document.documentElement.offsetHeight - (window.pageYOffset + note.getBoundingClientRect().top))
   if (noteTop > 1) {
     if(note){
       note.remove(); 
@@ -319,6 +319,12 @@ const keys = document.getElementsByClassName('key')
 const line = document.getElementsByClassName('line')
 
 
+function getRandomSpeed() {
+const randomrange = [50,100,110,120,130,140,150,175,200,250,300,500]
+console.log(randomrange[Math.floor(Math.random() * 11) + 1])
+return randomrange[Math.floor(Math.random() * 11) + 1]
+}
+
 function Game1(){
   setInterval(createNote, 1000); 
   buttonvinish();
@@ -340,7 +346,7 @@ function Game5(){
   buttonvinish();
 }
 function Game6(){
-  setInterval(createNote, 125); 
+  setInterval(createNote, getRandomSpeed()); 
   buttonvinish();
 }
 function Game7(){
