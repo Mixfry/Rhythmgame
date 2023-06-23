@@ -17,6 +17,7 @@ miss.style.display = 'none';
 document.addEventListener('keydown', handleKeyDown);
 document.addEventListener('keyup', handleKeyUp);
 
+let NOTECOUNT = 0;
 let COMBOCOUNT = 0;
 let PERFECTCOUNT = 0;
 let GREATCOUNT = 0;
@@ -111,12 +112,15 @@ function showJudgeCount(judge) {
   const greatkun = document.getElementById("GreatCount");
   const goodkun = document.getElementById("GoodCount");
   if (judge == 'Good') {
+    NOTECOUNT++;
     GOODCOUNT++;
     goodkun.innerHTML = `Good : ${GOODCOUNT}`;
   }else if (judge == 'Great') {
+    NOTECOUNT++;
     GREATCOUNT++;
     greatkun.innerHTML = `Great : ${GREATCOUNT}`;
   }else {
+    NOTECOUNT++;
     PERFECTCOUNT++;
     perfectkun.innerHTML = `Perfect : ${PERFECTCOUNT}`;
   }
@@ -255,14 +259,29 @@ setTimeout(() => {
       combokun.innerHTML = ``;
 
       showCount('Miss');
+      NOTECOUNT++;
       MISSCOUNT++;
       misskun.innerHTML = `Miss : ${MISSCOUNT}`;
     }
   }
 }, 980);
+Accuracy();
+
 }
 
 
+
+
+//                               //
+//               精度             //
+//                               //
+  const Accuracy = () => {
+  const AccuracY = document.getElementById("accuracy");
+
+  const perfectaccuracy = Math.floor(PERFECTCOUNT / NOTECOUNT * 10000) / 100;
+ 
+  AccuracY.innerHTML = `${perfectaccuracy} %`;
+  }
 
 
 

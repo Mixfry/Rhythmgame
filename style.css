@@ -71,6 +71,15 @@ html {
   font-size: 20px;
 }
 
+#accuracy{
+  color: #e5e5e567;
+  position: fixed;
+  top: 20%;
+  right: 50%;
+  font-size: 50px;
+  transform: translateX(50%);
+}
+
 .line{
   content: "";
   position: fixed;
