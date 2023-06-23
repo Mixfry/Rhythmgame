@@ -365,7 +365,7 @@ function Game5(){
   buttonvinish();
 }
 function Game6(){
-  setInterval(createNote, 125); 
+  setInterval(createNote, 120); 
   buttonvinish();
 }
 function Game7(){
