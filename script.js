@@ -14,6 +14,9 @@ good.style.display = 'none';
 const miss = document.getElementById('Miss');
 miss.style.display = 'none';
 
+const accuracy = document.getElementById('accuracy');
+accuracy.style.display = 'none';
+
 document.addEventListener('keydown', handleKeyDown);
 document.addEventListener('keyup', handleKeyUp);
 
@@ -223,6 +226,7 @@ function getRandomColumnNumber() {
   }
   
   previousNumber = randomNumber;
+  Accuracy();
   return randomNumber;
 }
 
@@ -379,6 +383,7 @@ function Game7(){
 }
 
 function buttonvinish(){
+  accuracy.style.display = 'inline-block'
   startButton1.style.display = 'none';
   startButton2.style.display = 'none';
   startButton3.style.display = 'none';
