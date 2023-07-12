@@ -2,21 +2,6 @@
 //        コード汚いから見ないで！！！！！！！！！
 // 
 
-const perfect = document.getElementById('Perfect');
-perfect.style.display = 'none';
-
-const great = document.getElementById('Great');
-great.style.display = 'none';
-
-const good = document.getElementById('Good');
-good.style.display = 'none';
-
-const miss = document.getElementById('Miss');
-miss.style.display = 'none';
-
-const accuracy = document.getElementById('accuracy');
-accuracy.style.display = 'none';
-
 document.addEventListener('keydown', handleKeyDown);
 document.addEventListener('keyup', handleKeyUp);
 
@@ -38,17 +23,15 @@ let SCORECOUNT = 0;
 
 
 function processNoteInColumn(columnNumber) {
-if(document.getElementsByClassName("note") != undefined)
-{
-  const column = document.getElementById(`column${columnNumber}`);
-  const notes = column.getElementsByClassName('note');
 
-  if (notes.length > 0) {
-    const note = notes[0];
-    note.parentNode.removeChild(note);
-    // ここでノーツに対する処理を追加する
-  }
-}
+    const column = document.getElementById(`column${columnNumber}`);
+    const notes = column.getElementsByClassName('note');
+
+    if (notes.length > 0) {
+      const note = notes[0];
+      note.parentNode.removeChild(note);
+      // ここでノーツに対する処理を追加する
+    }
 }
 
 
@@ -194,6 +177,8 @@ switch (key) {
     return 3;
   case 'K':
     return 4;
+  case 'L':
+    return 5;
   default:
     return null;
 }
@@ -237,9 +222,11 @@ function getRandomColumnNumber() {
 function createNote() {
 //ランダム生成用
 const columnNumber = getRandomColumnNumber();
+
 //譜面制作用
 // const columnNumber = columnSequence[sequenceIndex];
 // sequenceIndex = (sequenceIndex + 1) % columnSequence.length;
+
 // 
 const column = document.getElementById(`column${columnNumber}`);
 const combokun = document.getElementById("combo");
@@ -255,7 +242,7 @@ column.appendChild(note);
 //ノーツ消す処理
 setTimeout(() => {
   let noteTop = note.offsetTop
-  // console.log(document.documentElement.offsetHeight - (window.pageYOffset + note.getBoundingClientRect().top))
+  // console.log(document.documentElement.offsetHeight - (window.pageYOffset + note.getBoundingClientRect().top)) 
   if (noteTop > 1) {
     if(note){
       note.remove(); 
@@ -321,7 +308,16 @@ column4.addEventListener('mouseup', () => handleKeyUp({ key: 'K' }));
 //                                                                                  //
 //        眠くて超ゴリ押しで書いたから見ないでください！！！！！！！！！！！！！！！！           //
 //                                                                                  //
+const keys = document.getElementsByClassName('key')
+const line = document.getElementsByClassName('line')
 
+// for (let i = 0; i < 9; i++) {
+
+//   document.getElementById(`button${i+1}`).style.display = style;
+//   const `startButton${i+1}` = document.getElementById(`button${i+1}`)
+
+
+// }
 
 const startButton1 = document.getElementById('button1')
 const startButton2 = document.getElementById('button2')
@@ -330,69 +326,143 @@ const startButton4 = document.getElementById('button4')
 const startButton5 = document.getElementById('button5')
 const startButton6 = document.getElementById('button6')
 const startButton7 = document.getElementById('button7')
-startButton1.addEventListener('click', Game1)
-startButton2.addEventListener('click', Game2)
-startButton3.addEventListener('click', Game3)
-startButton4.addEventListener('click', Game4)
-startButton5.addEventListener('click', Game5)
-startButton6.addEventListener('click', Game6)
-startButton7.addEventListener('click', Game7)
+const startButton8 = document.getElementById('button8')
+const startButton9 = document.getElementById('button9')
 
-const keys = document.getElementsByClassName('key')
-const line = document.getElementsByClassName('line')
+const buttonHr = document.getElementsByClassName('buttonHr')
+
+const Exback4K = document.getElementById('Exback4K')
+Exback4K.addEventListener('click', Exback4)
+
+const back4K = document.getElementById('back4K')
+back4K.addEventListener('click', back4)
 
 
-function getRandomSpeed() {
-const randomrange = [50,100,110,120,130,140,150,175,200,250,300,500]
-console.log(randomrange[Math.floor(Math.random() * 11) + 1])
-return randomrange[Math.floor(Math.random() * 11) + 1]
+const GameSection = [Game1, Game2, Game3, Game4, Game5, Game6, Game7, Game8, Game9]
+
+for (let i = 0; i < 9; i++) {
+
+  const poo = document.getElementById(`button${i+1}`)
+  poo.addEventListener('click', GameSection[i])
+
 }
+
+
+const Key4 = document.getElementsByClassName('Key4')
+const TitleKeys = document.getElementById('TitleKeys')
+const tit4K = document.getElementById('tit4K')
+tit4K.addEventListener('click', GameKey4)
+
+function GameKey4(){
+  TitleKeys.style.display = 'none';
+  Key4[0].style.display = 'block';
+  back4K.style.display = 'block';
+  buttonHr[0].style.display = 'block';
+  buttonHr[1].style.display = 'block';
+}
+
 
 function Game1(){
   setInterval(createNote, 1000); 
-  buttonvinish();
+  buttonvinish4K('none');
 }
 function Game2(){
   setInterval(createNote, 750); 
-  buttonvinish();
+  buttonvinish4K('none');
 }
 function Game3(){
   setInterval(createNote, 500); 
-  buttonvinish();
+  buttonvinish4K('none');
 }
 function Game4(){
   setInterval(createNote, 200); 
-  buttonvinish();
+  buttonvinish4K('none');
 }
 function Game5(){
   setInterval(createNote, 150); 
-  buttonvinish();
+  buttonvinish4K('none');
 }
+
 function Game6(){
-  setInterval(createNote, 120); 
-  buttonvinish();
+  setInterval(createNote, 110); 
+  buttonvinish4K('none');
+
+  // column5.style.display = 'inline-block';
+
+  const linee = document.getElementById('line')
+  container.classList.add('Hline');
 }
 function Game7(){
   setInterval(createNote, 175); 
-  buttonvinish();
+  buttonvinish4K('none');
   column1.classList.add('left');
   column2.classList.add('left');
   column3.classList.add('right');
   column4.classList.add('right');
   line[0].classList.add('wide');
 }
+function Game8(){
+  setInterval(createNote, 95); 
+  buttonvinish4K('none');
+}
 
-function buttonvinish(){
-  accuracy.style.display = 'inline-block'
-  startButton1.style.display = 'none';
-  startButton2.style.display = 'none';
-  startButton3.style.display = 'none';
-  startButton4.style.display = 'none';
-  startButton5.style.display = 'none';
+function Game9(){
+  buttonvinish4K('none');
+  accuracy.style.display = 'none'
+
+  startButton6.style.display = 'inline-block';
+  startButton7.style.display = 'inline-block';
+  startButton8.style.display = 'inline-block';
+
+  buttonHr[1].style.display = 'none';
+
+  const Exback4K = document.getElementById('Exback4K')
+  Exback4K.style.display = 'inline-block';
+  back4K.style.display = 'none';
+}
+
+function Exback4(){
+  buttonvinish4K('inline-block');
   startButton6.style.display = 'none';
   startButton7.style.display = 'none';
-  keys[0].style.display = 'none';
-  keys[1].style.display = 'none';
-  keys[2].style.display = 'none';
-  keys[3].style.display = 'none';
+  startButton8.style.display = 'none';
+
+  buttonHr[1].style.display = 'block';
+
+  const Exback4K = document.getElementById('Exback4K')
+  Exback4K.style.display = 'none';
+  back4K.style.display = 'block';
 }
+
+function back4(){
+  TitleKeys.style.display = 'block';
+  Key4[0].style.display = 'none';
+
+  buttonHr[0].style.display = 'none';
+
+  const back4K = document.getElementById('back4K')
+  back4K.style.display = 'none';
+}
+
+function buttonvinish4K(style){
+
+  accuracy.style.display = 'inline-block'
+  Exback4K.style.display = style;
+  back4K.style.display = style;
+
+
+  for (let i = 0; i < 9; i++) {
+
+    document.getElementById(`button${i+1}`).style.display = style;
+
+  }
+
+  for (let i = 0; i < 4; i++) {
+
+    keys[i].style.display = style;
+
+  }
+}
+
+
+

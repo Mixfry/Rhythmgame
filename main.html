@@ -18,12 +18,13 @@
 
 
   <!-- 4レーン -->
-  <div class="game-container">
+  <div class="game-container" id="containerr">
     <div class="column" id="column1"><h3 class="key">d</h3></div>
     <div class="column" id="column2"><h3 class="key">f</h3></div>
     <div class="column" id="column3"><h3 class="key">j</h3></div>
     <div class="column" id="column4"><h3 class="key">k</h3></div>
-    <div class="line"></div>
+    <div class="column" id="column5"><h3 class="key">L</h3></div>
+    <div class="line" id="line"></div>
   </div>
   
 
@@ -36,15 +37,43 @@
     <h3 id="Miss">Miss</h3>  
   </div>
 
-  <!-- 難易度選択 -->
+  <!-- 難易度ボタン -->
   <div class="button">
-    <button class="Start" id="button1" >やさしい</button>
-    <button class="Start" id="button2" >簡単</button>
-    <button class="Start" id="button3" >普通</button>
-    <button class="Start" id="button4" >難しい</button>
-    <button class="Start" id="button5" >達人</button>
-    <button class="Start" id="button6" >仙人(製作者の限界)</button>
-    <button class="Start hello" id="button7" >?</button>
+
+    <!-- 指選択 -->
+    <div id="TitleKeys">
+      <button class="Menu comming" id="tit3K" >comming soon...</button>
+      <button class="Menu" id="tit4K" >4本指 ⇨</button>
+      <button class="Menu comming" id="tit5K" >comming soon...</button>
+    </div>
+
+    <button class="Menu" id="back4K" >⇦⇦</button>
+    <button class="Menu" id="Exback4K" >⇦⇦</button>
+    
+    <hr class="buttonHr">
+    
+    <!-- 4本 -->
+    <div class="Key4">
+      <button class="Menu" id="button1" >やさしい</button>
+      <button class="Menu" id="button2" >簡単</button>
+      <button class="Menu" id="button3" >普通</button>
+      <button class="Menu" id="button4" >難しい</button>
+      <button class="Menu" id="button5" >達人</button>
+
+      <hr class="buttonHr">
+
+      <button class="Menu entrance" id="button9" >Extra ⇨</button>
+
+      <!-- Extra -->
+      <div>
+        <button class="Menu" id="button6" >仙人(製作者の限界)</button>
+        <button class="Menu hello" id="button7" >?</button>
+        <button class="Menu hell" id="button8" >できるかな？</button>
+      </div>
+    </div>
+
+
+
   </div>
 
 

@@ -19,13 +19,16 @@ html {
 
 .column {
   /* transform: rotateX(60deg); */
-  left: 30%;
+  left: 25%;
   width: 10%;
   height: 100%;
   background-color: #222;
   position: relative;
 }
 
+#column5{
+  display: none;
+}
 
 /* ノーツの見た目 */
 .note {
@@ -72,6 +75,7 @@ html {
 }
 
 #accuracy{
+  display: none;
   color: #e5e5e567;
   position: fixed;
   top: 20%;
@@ -88,10 +92,14 @@ html {
   width: 40%;
   /* top: 85%; */
   bottom: 80px;
-  left: 30%;
+  left: 25%;
   background-color: red;
   z-index: 200;
   /* transform: rotateX(60deg) */
+}
+
+.Hline{
+  width: 50%;
 }
 
 .changer{
@@ -109,15 +117,9 @@ html {
   width: 150px;
 }
 
-.Start{
-  width: 100%;
-}
 
-.hello{
-  position: fixed;
-  width: 2%;
-  top: -15px;
-  left: -2px;
+.comming{
+  opacity: 0.5;
 }
 
 .key{

@@ -7,20 +7,26 @@
 
 .column:nth-child(2) {
   position: fixed;
-  left: 40%;
+  left: 35%;
   background-color: #555;
 }
 
 .column:nth-child(3) {
   position: fixed;
-  left: 50%;
+  left: 45%;
   background-color: #777;
 }
 
 .column:nth-child(4) {
   position: fixed;
-  left: 60%;
+  left: 55%;
   background-color: #999;
+}
+
+.column:nth-child(5) {
+  position: fixed;
+  left: 65%;
+  background-color: #a9a9a9;
 }
 
 .column.active {
@@ -28,9 +34,6 @@
   background: linear-gradient(rgba(60, 58, 58, 0.6), rgba(140, 145, 144, 0.6), rgba(202, 234, 226, 0.6));
 }
 
-/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
-/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
-/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
 /*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
 /*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
 /*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -43,7 +46,7 @@
   right: 50%;
   font-size: 0; /* 初期状態では非表示 */
   transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
-  display: inline-block;
+  display: none;
   background: linear-gradient(90deg, #41a8d0, #4173d0 30%, #de70ff);
   background: -webkit-linear-gradient(0deg, #41a8d0, #419cd0 30%, #d470ff);
   -webkit-background-clip: text;
@@ -73,7 +76,7 @@
   right: 50%;
   font-size: 0; /* 初期状態では非表示 */
   transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
-  display: inline-block;
+  display: none;
   background: linear-gradient(90deg, #d05941, #d09241 30%, #ffde70);
   background: -webkit-linear-gradient(0deg, #d05941, #d09241 30%, #ffde70);
   -webkit-background-clip: text;
@@ -102,7 +105,7 @@
   right: 50%;
   font-size: 0; /* 初期状態では非表示 */
   transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
-  display: inline-block;
+  display: none;
   background: linear-gradient(90deg, #d0c241, #7fd041 30%, #70ff8a);
   background: -webkit-linear-gradient(0deg, #d0c241, #7fd041 30%, #70ff8a);
   -webkit-background-clip: text;
@@ -131,7 +134,7 @@
   right: 50%;
   font-size: 0; /* 初期状態では非表示 */
   transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
-  display: inline-block;
+  display: none;
   background: linear-gradient(90deg, #ffffff, #a8a8a8 30%, #1f1e33);
   background: -webkit-linear-gradient(0deg, #ffffff, #a8a8a8 30%, #1f1e33);
   -webkit-background-clip: text;
@@ -205,5 +208,37 @@
   width: 84.1vw;
 }
 
+.Key4{
+  display: none;
+}
+
+/*   //////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
+#button6{
+  display: none;
+}
+
+#button8{
+  display: none;
+}
+
+.Menu{
+  width: 100%;
+}
+
+.hello{
+  display: none;
+}
+
+#Exback4K{
+  display: none;
+}
+
+#back4K{
+  display: none;
+}
+
+.buttonHr{
+  display: none;
+}
