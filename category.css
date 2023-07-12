@@ -43,7 +43,8 @@
 #Perfect {
   position: absolute;
   bottom: 35%;
-  right: 50%;
+  /* right: 50%; */
+  right: 55%;
   font-size: 0; /* 初期状態では非表示 */
   transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
   display: none;
@@ -73,7 +74,8 @@
 #Great {
   position: absolute;
   bottom: 35%;
-  right: 50%;
+  /* right: 50%; */
+  right: 55%;
   font-size: 0; /* 初期状態では非表示 */
   transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
   display: none;
@@ -102,7 +104,8 @@
 #Good {
   position: absolute;
   bottom: 35%;
-  right: 50%;
+  /* right: 50%; */
+  right: 55%;
   font-size: 0; /* 初期状態では非表示 */
   transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
   display: none;
@@ -131,7 +134,8 @@
 #Miss {
   position: absolute;
   bottom: 35%;
-  right: 50%;
+  /* right: 50%; */
+  right: 55%;
   font-size: 0; /* 初期状態では非表示 */
   transform: translateX(50%) scale(0.8); /* 初期状態の拡大率 */
   display: none;
