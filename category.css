@@ -225,11 +225,15 @@
 
 #button8{
   display: none;
+  margin-bottom: 5%;
 }
 #button10{
   display: none;
-}#button11{
+  margin-bottom: 5%;
+}
+#button11{
   display: none;
+  margin-bottom: 1%;
 }
 
 .Menu{
