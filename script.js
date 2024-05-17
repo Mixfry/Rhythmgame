@@ -473,7 +473,7 @@ function buttonvinish4K(style){
 
   }
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 5; i++) {
 
     keys[i].style.display = style;
 
