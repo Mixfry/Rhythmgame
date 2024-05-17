@@ -226,12 +226,19 @@
 #button8{
   display: none;
 }
+#button10{
+  display: none;
+}#button11{
+  display: none;
+}
 
 .Menu{
   width: 100%;
 }
 
 .hello{
+  display: none;
+}.helloo{
   display: none;
 }
 

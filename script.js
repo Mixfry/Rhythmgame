@@ -328,6 +328,8 @@ const startButton6 = document.getElementById('button6')
 const startButton7 = document.getElementById('button7')
 const startButton8 = document.getElementById('button8')
 const startButton9 = document.getElementById('button9')
+const startButton10 = document.getElementById('button10')
+const startButton11 = document.getElementById('button11')
 
 const buttonHr = document.getElementsByClassName('buttonHr')
 
@@ -338,9 +340,9 @@ const back4K = document.getElementById('back4K')
 back4K.addEventListener('click', back4)
 
 
-const GameSection = [Game1, Game2, Game3, Game4, Game5, Game6, Game7, Game8, Game9]
+const GameSection = [Game1, Game2, Game3, Game4, Game5, Game6, Game7, Game8, Game9, Game10, Game11]
 
-for (let i = 0; i < 9; i++) {
+for (let i = 0; i < 11; i++) {
 
   const poo = document.getElementById(`button${i+1}`)
   poo.addEventListener('click', GameSection[i])
@@ -406,6 +408,16 @@ function Game8(){
   buttonvinish4K('none');
 }
 
+function Game10(){
+  setInterval(createNote, 85); 
+  buttonvinish4K('none');
+}
+
+function Game11(){
+  setInterval(createNote, 70); 
+  buttonvinish4K('none');
+}
+
 function Game9(){
   buttonvinish4K('none');
   accuracy.style.display = 'none'
@@ -413,6 +425,8 @@ function Game9(){
   startButton6.style.display = 'inline-block';
   startButton7.style.display = 'inline-block';
   startButton8.style.display = 'inline-block';
+  startButton10.style.display = 'inline-block';
+  startButton11.style.display = 'inline-block';
 
   buttonHr[1].style.display = 'none';
 
@@ -426,6 +440,8 @@ function Exback4(){
   startButton6.style.display = 'none';
   startButton7.style.display = 'none';
   startButton8.style.display = 'none';
+  startButton10.style.display = 'none';
+  startButton11.style.display = 'none';
 
   buttonHr[1].style.display = 'block';
 
@@ -451,7 +467,7 @@ function buttonvinish4K(style){
   back4K.style.display = style;
 
 
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 11; i++) {
 
     document.getElementById(`button${i+1}`).style.display = style;
 
