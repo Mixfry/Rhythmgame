@@ -414,7 +414,7 @@ function Game10(){
 }
 
 function Game11(){
-  setInterval(createNote, 70); 
+  setInterval(createNote, 75); 
   buttonvinish4K('none');
 }
 
