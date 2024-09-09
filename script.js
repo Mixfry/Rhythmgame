@@ -191,7 +191,53 @@ switch (key) {
 
 
 //一応自分で作ることもできる、一応
-// let columnSequence = [4,3,2,1,2,3];
+// let columnSequence = [
+//   1,2,1,2,3,2,3,2,4,3,4,3,2,3,2,3,
+//   1,2,1,2,3,2,3,2,4,3,4,3,2,3,2,3,1,2,
+//   1,2,3,4,3,2,1,
+//   2,3,4,3,2,1,
+//   2,3,4,3,2,1 ,2,1,
+//   2,3,4,3, 4,3, 2,1, 2,1,
+//   2,3,4,3, 4,3, 2,1,
+//   2,3,4,3,2,1,
+//   2,3,4,3,2,1,2,
+//   1,2,3,4, ,
+
+//   1, , 1,
+//   3, , 3,
+//   2, , 2,
+//   4, , 4, ,
+
+//   1,1,
+//   3,3,
+//   2,2,
+//   4,4, ,
+  
+//   1,2,3,
+//   1,2,3,
+//   1,2,3,
+//   2,3,4,
+//   2,3,4,
+//   2,3,4,
+//   3,2,1,
+//   3,2,1,
+//   3,2,1,
+//   2,3,4,
+//   2,3,4,
+//   2,3,4,
+//   3,2,1,
+//   3,2,1,
+//   3,2,1,
+//   2,3,4,
+//   2,3,4,
+//   2,3,4, ,
+
+//   1,3,1,3,
+//   4,2,4,2, ,
+//   2,3,1,4,
+//   1,4,2,3,
+//   , ,
+// ];
 // let sequenceIndex = 0;
 
 
@@ -269,7 +315,7 @@ Accuracy();
   const Accuracy = () => {
   const AccuracY = document.getElementById("accuracy");
 
-  const perfectaccuracy = Math.floor(PERFECTCOUNT / NOTECOUNT * 10000) / 100;
+  const perfectaccuracy = Math.floor((PERFECTCOUNT + GREATCOUNT/2 + GOODCOUNT/4) / NOTECOUNT * 10000) / 100;
  
   AccuracY.innerHTML = `${perfectaccuracy} %`;
   }
@@ -479,6 +525,3 @@ function buttonvinish4K(style){
 
   }
 }
-
-
-
